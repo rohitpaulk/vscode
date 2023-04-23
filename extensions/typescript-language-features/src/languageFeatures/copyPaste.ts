@@ -27,7 +27,7 @@ export function register(selector: DocumentSelector) {
 	console.log('registering paste provider');
 	return vscode.languages.registerDocumentPasteEditProvider(selector.syntax, new PasteEditProvider(), {
 		pasteMimeTypes: [
-			'*' // Try all for now
+			'*/*' // Try all for now
 		]
 	});
 }
